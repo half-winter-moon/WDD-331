@@ -1,0 +1,35 @@
+/* 
+box-sizing: border-box makes it so that the 
+width property will be the total width, 
+including padding and border 
+
+image{max-width:100%} makes it so that it's never bigger than parent?
+
+html {height:100%} makes it so that the html element is same size as 
+the browser window. helps with vertical alignment.
+
+100vh is 100% of viewport height. vw is viewport width. vmin is look 
+at height/width of viewport and browser and pick the smaller. vmax is opposite.
+
+DEVELOP MY OWN OPINIONS! WHATEVER CSS DEFAULTS BUG ME, I CAN CHANGE WITH MY CODE
+
+em = height of the letter 'm'
+ch = width of the number '0'
+
+To find the desired width in em, take the default font size you want for your page, and divide the width by that
+
+this might be used in hw:
+article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display:flex;
+    -webkit-box-orient: 
+
+}
+
+@media screen and (max-width: 50em) {}
+
+position: fixed; (or maybe sticky??)
+
+
+*/

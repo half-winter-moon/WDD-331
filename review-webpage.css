@@ -1,0 +1,120 @@
+body>h1,
+h2 {
+    font-family: 'Lora', serif;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    background-color: #FAEBD7;
+    padding: 2em;
+}
+
+header {
+    background-color: #6495ED;
+    text-align: right;
+    padding: 4em;
+    color: #FAEBD7;
+}
+header > h1 {
+    font-family: 'Lora', serif;
+}
+
+header>nav>ul>li {
+    list-style-type: none;
+    line-height: 2em;
+}
+
+article {
+    background-color: white;
+    max-width: 300px;
+    display: block;
+    margin: auto auto;
+    padding: 2em;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 10px #d3d2d2;
+}
+article > div {
+    color: grey;
+}
+
+img {
+    display: block;
+    margin: auto auto;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1>a,
+header>nav>ul>li>a:visited {
+    color: #FAEBD7;
+}
+
+header>nav>ul>li>a:active {
+    color: #DEB887;
+}
+
+header>nav>ul>li>a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+main>article>section>p>a:link,
+main>article>section>p>a:visited {
+    color: #6495ED;
+}
+
+main>article>section>p>a:active {
+    color: #DEB887;
+}
+
+main>article>section>p>a:hover {
+    text-decoration: underline;
+}
+
+main>article>section>h2>a:link,
+main>article>section>h2>a:visited {
+    color: black;
+}
+
+main>article>section>h2>a:active {
+    color: #DEB887;
+}
+
+main>article>section>h2>a:hover {
+    color: #6495ED;
+    text-decoration: underline;
+}
+
+header>h1 {
+    color: #FAEBD7;
+}
+
+/* Large screen */
+@media only screen and (min-width: 54.5em) {
+    body > div {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+    }
+    nav {
+        grid-column: 1;
+    }
+    article {
+        max-width: 600px;
+    }
+    img {
+        padding: 50px;
+    }
+    h2 {
+        font-size: 2em;
+        margin-top: 5px;
+    }
+    article > div {
+        font-size: 1.1em;
+    }
+}
