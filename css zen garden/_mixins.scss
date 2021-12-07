@@ -1,0 +1,21 @@
+@mixin rotatedText($top) {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-gap: 30px;
+    margin-bottom: 20px;
+    position: relative;
+
+    h3 {
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        width: 200px;
+        margin-left: 12px;
+        position: absolute;
+        top: $top;
+        left: -100px;
+    }
+
+    p {
+        grid-column: 2/3;
+    }
+}

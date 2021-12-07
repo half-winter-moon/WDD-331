@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap');
 @import '_variables.scss';
+@import '_mixins.scss';
+
+/*Icons made by Freepik from www.flaticon.com*/
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +10,7 @@
 }
 
 body {
-    background: url('light-green-mountains-optimized.jpg') no-repeat center center fixed;
+    background: url('mountains.jpg') no-repeat center center fixed;
     background-size: cover; 
 }
 
@@ -25,7 +28,7 @@ p {
     color: white;
     a {
         text-decoration: none;
-    color: $steelTeal;
+    color: $turquoise;
     font-weight: 700;
     font-style: italic;}
     position: relative;
@@ -38,12 +41,41 @@ p {
     }
 }
 
-.extra1 {
-    width: 100vw;
-    height: 100%;
-    background-color: black;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    background-attachment: fixed;
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.explanation {
+    @include rotatedText(80px);
+}
+
+.benefits {
+    @include rotatedText(-38px);
+}
+
+
+.requirements {
+    p {
+        margin: 10px;
+    }
+}
+
+.select {
+    margin-top: 10px;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.next::before {
+    background: url('leaf.png');
+}
+
+@media screen and (min-width:650px){
+
+
 }

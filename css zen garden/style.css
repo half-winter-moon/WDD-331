@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap");
+/*Icons made by Freepik from www.flaticon.com*/
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  background: url("light-green-mountains-optimized.jpg") no-repeat center center fixed;
+  background: url("mountains.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -27,7 +28,7 @@ p {
 }
 .page-wrapper a {
   text-decoration: none;
-  color: #5C8D89;
+  color: #A7D7C5;
   font-weight: 700;
   font-style: italic;
 }
@@ -39,14 +40,66 @@ p {
   margin-bottom: 30px;
 }
 
-.extra1 {
-  width: 100vw;
-  height: 100%;
-  background-color: black;
-  opacity: 0.6;
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.explanation {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-gap: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.explanation h3 {
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 200px;
+  margin-left: 12px;
   position: absolute;
-  top: 0;
-  background-attachment: fixed;
+  top: 80px;
+  left: -100px;
+}
+.explanation p {
+  grid-column: 2/3;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-gap: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.benefits h3 {
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 200px;
+  margin-left: 12px;
+  position: absolute;
+  top: -38px;
+  left: -100px;
+}
+.benefits p {
+  grid-column: 2/3;
+}
+
+.requirements p {
+  margin: 10px;
+}
+
+.select {
+  margin-top: 10px;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.next::before {
+  background: url("leaf.png");
 }
 
 /*# sourceMappingURL=style.css.map */
