@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,45 @@
 body {
   background: url("light-green-mountains-optimized.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Playfair Display";
+}
+
+p {
+  line-height: 1.4;
+  font-family: "Quicksand", sans-serif;
+}
+
+.page-wrapper {
+  padding: 60px 20px 0px 20px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.page-wrapper a {
+  text-decoration: none;
+  color: #5C8D89;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.intro {
+  margin-bottom: 60px;
+}
+.intro header {
+  margin-bottom: 30px;
+}
+
+.extra1 {
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  background-attachment: fixed;
 }
 
 /*# sourceMappingURL=style.css.map */
