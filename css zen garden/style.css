@@ -138,4 +138,62 @@ nav[role=navigation] ul li a, .zen-resources ul li a {
   margin: 20px 0;
 }
 
+@media screen and (min-width: 650px) {
+  body {
+    background: transparent;
+    color: black;
+  }
+
+  header h1::before {
+    content: "";
+    background-image: url("layer2.png");
+  }
+
+  header h::after {
+    content: url("layer3png");
+  }
+
+  .explanation::before {
+    content: url("misty forest.png");
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .explanation {
+    background-color: blanchedalmond;
+  }
+
+  .participation::before {
+    content: url("railroad forest.png");
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .participation {
+    background-color: blanchedalmond;
+  }
+
+  .benefits::before {
+    content: url("forest cliff.png");
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .requirements {
+    background-color: blanchedalmond;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
