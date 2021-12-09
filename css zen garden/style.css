@@ -1,199 +1,198 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap");
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 /*Icons made by Freepik from www.flaticon.com*/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   background: url("mountains.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
+  background-size: cover; }
 
-h1, h2, h3, h4, h5 {
-  font-family: "Playfair Display";
-}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Playfair Display'; }
 
 p {
   line-height: 1.4;
-  font-family: "Quicksand", sans-serif;
-}
+  font-family: 'Quicksand', sans-serif; }
 
 .page-wrapper {
   padding: 60px 20px 0px 20px;
   color: white;
   position: relative;
-  z-index: 1;
-}
-.page-wrapper a {
-  text-decoration: none;
-  color: #A7D7C5;
-  font-weight: 700;
-  font-style: italic;
-}
+  z-index: 1; }
+  .page-wrapper a {
+    text-decoration: none;
+    color: #A7D7C5;
+    font-weight: 700;
+    font-style: italic; }
 
 .intro {
-  margin-bottom: 60px;
-}
-.intro header {
-  margin-bottom: 30px;
-}
+  margin-bottom: 60px; }
+  .intro header {
+    margin-bottom: 30px; }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-}
+  gap: 40px; }
 
 .explanation {
   display: grid;
   grid-template-columns: 20px 1fr;
   grid-gap: 30px;
   margin-bottom: 20px;
-  position: relative;
-}
-.explanation h3 {
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  width: 200px;
-  margin-left: 12px;
-  position: absolute;
-  top: 80px;
-  left: -100px;
-}
-.explanation p {
-  grid-column: 2/3;
-}
+  position: relative; }
+  .explanation h3 {
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 200px;
+    margin-left: 12px;
+    position: absolute;
+    top: 80px;
+    left: -100px; }
+  .explanation p {
+    grid-column: 2/3; }
 
 .benefits {
   display: grid;
   grid-template-columns: 20px 1fr;
   grid-gap: 30px;
   margin-bottom: 20px;
-  position: relative;
-}
-.benefits h3 {
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  width: 200px;
-  margin-left: 12px;
-  position: absolute;
-  top: -38px;
-  left: -100px;
-}
-.benefits p {
-  grid-column: 2/3;
-}
+  position: relative; }
+  .benefits h3 {
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 200px;
+    margin-left: 12px;
+    position: absolute;
+    top: -38px;
+    left: -100px; }
+  .benefits p {
+    grid-column: 2/3; }
 
-.participation p, .requirements p {
-  margin: 10px 10px 10px 0;
-}
+.participation p,
+.requirements p {
+  margin: 10px 10px 10px 0; }
 
 .select {
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 .navigation ul {
-  list-style: none;
-}
+  list-style: none; }
 
 ul {
-  list-style: none;
-}
+  list-style: none; }
 
-.next a::before, .viewall a::before {
-  content: url("leaf-24px.png");
-}
+.next a::before,
+.viewall a::before {
+  content: url("leaf-24px.png"); }
 
-.next a, .viewall a {
-  margin-top: -15px;
-}
+.next a,
+.viewall a {
+  margin-top: -15px; }
 
 .next {
-  height: 28px;
-}
+  height: 28px; }
 
-nav[role=navigation] ul {
+nav[role='navigation'] ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 30px 0;
-}
+  margin: 30px 0; }
 
-nav[role=navigation] ul li a, .zen-resources ul li a {
+nav[role='navigation'] ul li {
+  display: grid;
+  grid-template-columns: auto 1fr; }
+
+.design-selection nav[role='navigation'] ul li::before {
+  content: url("trunk.png");
+  background-size: contain;
+  grid-row: 1/4;
+  margin-right: 15px;
+  animation: rotate 3s linear infinite; }
+
+nav[role='navigation'] ul li a,
+.zen-resources ul li a {
   display: flex;
   align-items: center;
-  gap: 5px;
-}
+  gap: 5px; }
 
-.view-css a::before, .css-resources a::before, .zen-faq a::before, .zen-submit a::before, .zen-translations a::before {
-  content: url("sprouting-leaf-24px.png");
-}
+.view-css a::before,
+.css-resources a::before,
+.zen-faq a::before,
+.zen-submit a::before,
+.zen-translations a::before {
+  content: url("sprouting-leaf-24px.png"); }
 
 .zen-resources ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 20px 0;
-}
+  margin: 20px 0; }
 
 @media screen and (min-width: 650px) {
   body {
-    background: transparent;
+    background: transparent; }
+
+  header {
+    height: 140vh;
+    position: relative;
+    perspective: 1px;
+    -webkit-perspective: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden; }
+    header h1::before {
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      content: '';
+      transform: translateZ(-6px) scale(1.2);
+      -webkit-transform: translateZ(-6px) scale(1.2);
+      background: url("layer3.png") no-repeat center bottom;
+      background-size: contain; }
+    header h1::after {
+      position: absolute;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      transform: translateZ(-4px) scale(1.2);
+      -webkit-transform: translateZ(-0.5px) scale(1.2);
+      background: url("layer2.png") no-repeat center bottom;
+      background-size: contain; }
+    header h2::before {
+      position: absolute;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      transform: translateZ(-4px) scale(1.2);
+      -webkit-transform: translateZ(-0.5px) scale(1.2);
+      background: url("layer1.png") no-repeat center bottom;
+      background-size: contain; }
+
+  .page-wrapper {
     color: black;
-  }
-
-  header h1::before {
-    content: "";
-    background-image: url("layer2.png");
-  }
-
-  header h::after {
-    content: url("layer3png");
-  }
-
-  .explanation::before {
-    content: url("misty forest.png");
-    width: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .explanation {
-    background-color: blanchedalmond;
-  }
-
-  .participation::before {
-    content: url("railroad forest.png");
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .participation {
-    background-color: blanchedalmond;
-  }
-
-  .benefits::before {
-    content: url("forest cliff.png");
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .requirements {
-    background-color: blanchedalmond;
-  }
-}
+    padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */
