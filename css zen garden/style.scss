@@ -3,6 +3,7 @@
 @import '_mixins.scss';
 
 /*Icons made by Freepik from www.flaticon.com*/
+
 * {
   margin: 0;
   padding: 0;
@@ -140,111 +141,183 @@ nav[role='navigation'] ul li a,
 }
 
 @media screen and (min-width: 650px) {
-  //   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
   body {
-    //   transform: translateZ(0px);
-    background: transparent;
+    background: url('layer3.png') no-repeat center 250px fixed;
+    background-size: 100%;
   }
-  //   }
 
-  header {
-    height: 140vh;
-    position: relative;
+  .intro {
+    padding: 30px 30px 0 30px;
+  }
 
-    perspective: 1px;
-    -webkit-perspective: 1px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-
-    & h1::before {
-      position: absolute;
-      display: block;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: 0;
-
-      content: '';
-      transform: translateZ(-6px) scale(1.2);
-      -webkit-transform: translateZ(-6px) scale(1.2);
-      background: url('layer3.png') no-repeat center bottom;
-      background-size: contain;
-    }
-
-    & h1::after {
-      position: absolute;
-      display: block;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-      content: '';
-      transform: translateZ(-4px) scale(1.2);
-      -webkit-transform: translateZ(-0.5px) scale(1.2);
-      background: url('layer2.png') no-repeat center bottom;
-      background-size: contain;
-    }
-
-    & h2::before {
-      position: absolute;
-      display: block;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-      content: '';
-      transform: translateZ(-4px) scale(1.2);
-      -webkit-transform: translateZ(-0.5px) scale(1.2);
-      background: url('layer1.png') no-repeat center bottom;
-      background-size: contain;
-    }
+  .intro header {
+    display: none;
   }
 
   .page-wrapper {
     color: black;
     padding: 0;
+    margin-top: 607px;
+    background-color: white;
+
+    font-size: 1.25em;
+    & a {
+      font-size: 1.15em;
+      color: $darkerGreen;
+    }
   }
 
-  //   .explanation::before {
-  //     content: url('misty forest.png');
-  //     width: 100%;
-  //     /* Create the parallax scrolling effect */
-  //     background-attachment: fixed;
-  //     background-position: center;
-  //     background-repeat: no-repeat;
-  //     background-size: cover;
-  //   }
-  //   .explanation {
-  //     background-color: blanchedalmond;
-  //   }
-  //   .participation::before {
-  //     content: url('railroad forest.png');
-  //     height: 100%;
-  //     /* Create the parallax scrolling effect */
-  //     background-attachment: fixed;
-  //     background-position: center;
-  //     background-repeat: no-repeat;
-  //     background-size: cover;
-  //   }
-  //   .participation {
-  //     background-color: blanchedalmond;
-  //   }
-  //   .benefits::before {
-  //     content: url('forest cliff.png');
-  //     height: 100%;
-  //     /* Create the parallax scrolling effect */
-  //     background-attachment: fixed;
-  //     background-position: center;
-  //     background-repeat: no-repeat;
-  //     background-size: cover;
-  //   }
+  .main,
+  aside {
+    padding: 90px;
+  }
 
-  //   .requirements {
-  //     background-color: blanchedalmond;
-  //   }
+  .extra1 {
+    background: url('heading.png') no-repeat center bottom;
+    background-size: auto;
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    top: 0;
+  }
+
+  .extra2 {
+    background: url('layer1.png') no-repeat center bottom;
+    background-size: 100% 90%;
+    background-size: contain;
+    width: 100%;
+    height: 607px;
+    position: absolute;
+    top: 0;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(1fr, 5);
+    grid-template-rows: repeat(700px, 12);
+    grid-gap: 0px;
+  }
+  .explanation {
+    grid-row: 1/3;
+    grid-column: 1/3;
+    margin-left: 50px;
+    z-index: -1;
+    p {
+      margin-right: 20px;
+    }
+  }
+  .participation {
+    grid-row: 2/5;
+    grid-column: 3/5;
+    margin-left: -50px;
+    margin-top: 100px;
+  }
+  .benefits {
+    grid-row: 5/8;
+    grid-column: 1/3;
+    margin-left: 50px;
+    margin-top: -50px;
+  }
+  .requirements {
+    grid-row: 8/11;
+    grid-column: 3/5;
+    margin-top: -100px;
+    margin-left: -50px;
+    z-index: 1;
+  }
+  .explanation,
+  .benefits {
+    max-width: 500px;
+    background-color: $lightestGreen;
+    padding: 30px;
+    h3 {
+      max-width: 300px;
+      margin-right: 15px;
+      left: -115px;
+      top: 85px;
+      background-color: $darkestGreen;
+      color: white;
+      padding: 15px;
+    }
+    p {
+      padding: 30px;
+    }
+  }
+  .benefits h3 {
+    text-align: right;
+  }
+  .participation,
+  .requirements {
+    max-width: 800px;
+    background-color: $darkerGreen;
+    color: white;
+    padding: 30px;
+    a {
+      color: #c9face;
+    }
+    h3 {
+      max-width: 400px;
+      margin-right: 15px;
+      margin-left: -60px;
+      background-color: $mediumGreen;
+      color: black;
+      padding: 15px;
+    }
+    p {
+      padding: 10px;
+    }
+  }
+  footer {
+    grid-row: 9;
+    border-style: double;
+    border-color: $darkestGreen;
+    border-width: 4px;
+    border-radius: 25px;
+    padding: 30px;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+  }
+  .design-selection {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .design-archives,
+  .zen-resources {
+    grid-column: 3/4;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .extra2 {
+    height: 767px;
+    top: 0;
+  }
+
+  .page-wrapper {
+    margin-top: 747px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .extra2 {
+    height: 1020px;
+    top: 0;
+  }
+
+  .page-wrapper {
+    margin-top: 1000px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .extra2 {
+    height: 1350px;
+    top: 0;
+  }
+
+  .page-wrapper {
+    margin-top: 1330px;
+  }
 }
